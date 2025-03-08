@@ -1,0 +1,68 @@
+body {
+    background-color: #fbe7e7;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #d63384;
+    margin-top: 20px;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: transform 0.3s, filter 0.3s;
+    border-radius: 10px;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.card-title {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    opacity: 0;
+    
+    transition: 0.3s;
+}
+
+.card:hover .card-title {
+    opacity: 1;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 300px; /* Set a fixed height or adjust according to your needs */
+    object-fit: cover; /* This will ensure images cover the area without stretching */
+    border-bottom: 1px solid #ddd; /* Optional: adds a border below the image */
+}
+
+.card-title {
+    text-align: center;
+    margin-top: 10px;
+}
